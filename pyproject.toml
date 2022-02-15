@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Show diff between 2 files"
+authors = ["SadLaboka <jitubuh@gmail.com>"]
+packages = [
+    { include = "gendiff" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.1"
+pytest-cov = "^3.0.0"
+ipython = "^8.0.1"
+
+[tool.poetry.scripts]
+hexlet-python-package = "gendiff.scripts.gendiff:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
