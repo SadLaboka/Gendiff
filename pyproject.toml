@@ -16,7 +16,7 @@ pytest-cov = "^3.0.0"
 ipython = "^8.0.1"
 
 [tool.poetry.scripts]
-hexlet-python-package = "gendiff.scripts.gendiff:main"
+gendiff = "gendiff.scripts.gendiff:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
