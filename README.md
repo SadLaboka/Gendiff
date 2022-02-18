@@ -1,6 +1,7 @@
 # Gendiff
 
 [![Actions Status](https://github.com/SadLaboka/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/SadLaboka/python-project-lvl2/actions)
+![flake8 and pytest](https://github.com/SadLaboka/python-project-lvl2/actions/workflows/main.yml/badge.svg)
 
 Gendiff is a simple CLI-tool to compare two files and show the difference between them
 
