@@ -12,3 +12,9 @@ package-install:
 
 package-reinstall:
 	python3 -m pip install --user --force-reinstall dist/*.whl
+
+test:
+	poetry run pytest
+
+lint:
+	poetry run flake8 gendiff
