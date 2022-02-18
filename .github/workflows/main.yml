@@ -1,6 +1,6 @@
 
   
-name: Run lint and pytest
+name: flake8 and pytest
 
 on:
   push:
