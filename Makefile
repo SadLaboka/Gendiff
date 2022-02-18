@@ -18,3 +18,6 @@ test:
 
 lint:
 	poetry run flake8 gendiff
+
+cc-coverage:
+	poetry run coverage xml
