@@ -19,5 +19,5 @@ test:
 lint:
 	poetry run flake8 gendiff
 
-cc-coverage:
-	poetry run coverage xml
+coverage:
+	poetry run pytest --cov=gendiff --cov-report=xml
