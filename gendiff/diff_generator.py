@@ -3,10 +3,11 @@ from gendiff.dict_comparator import compare_dicts
 from gendiff.formatters.stylish import format_to_json
 
 
-def generate_diff(filepath1: str, filepath2: str) -> str:
+def generate_diff(path1: str, path2: str, output_format="stylish") -> str:
     """Generates difference between 2 files"""
-    file1 = construct_dict(filepath1)
-    file2 = construct_dict(filepath2)
+    file1 = construct_dict(path1)
+    file2 = construct_dict(path2)
     diff = compare_dicts(file1, file2)
-    output = format_to_json(diff)
+    if output_format == "stylish":
+        output = format_to_json(diff)
     return output
