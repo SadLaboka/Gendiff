@@ -14,6 +14,13 @@ Gendiff is a simple CLI-tool to compare two files and show the difference betwee
 [![asciicast](https://github.com/SadLaboka/python-project-lvl2/blob/main/docs/json_json.svg)](https://asciinema.org/a/0DK7OpfKQzXHUQJcaac02TarZ)
 </details>
 
+## Comparing 2 nested JSON-files:
+<details>
+  <summary>Click to show</summary>
+  
+[![asciicast](https://github.com/SadLaboka/python-project-lvl2/blob/main/docs/nested_json_json.svg)](https://asciinema.org/a/u3wVhAOyc4jxNC05UtK2oLtPr)
+</details>
+
 ## Comparing 2 flat YAML-files:
 <details>
   <summary>Click to show</summary>
