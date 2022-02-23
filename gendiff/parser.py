@@ -14,7 +14,9 @@ def construct_dict(filepath: str) -> dict:
 
 
 def boolean_to_lower_str(source_dict: dict) -> None:
-    """Transforms all True/False in dict values to true/false string"""
+    """
+    Transforms all True/False/None in dict values to true/false/null string
+    """
     for key, item in source_dict.items():
         if isinstance(item, dict):
             boolean_to_lower_str(item)

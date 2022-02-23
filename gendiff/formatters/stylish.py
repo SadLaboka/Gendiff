@@ -7,8 +7,8 @@ from gendiff.status_constants import (
 )
 
 
-def format_to_json(diff: dict, depth=0) -> str:
-    """formats diff to json-like style for output"""
+def format_to_stylish(diff: dict, depth=0) -> str:
+    """Formats diff to json-like style for output"""
     output = []
     indent = UNCHANGED * depth
     for key, node in diff.items():
@@ -17,7 +17,7 @@ def format_to_json(diff: dict, depth=0) -> str:
         if node_status == NESTED:
             output.extend([
                 f'{indent}{UNCHANGED}{key}: {{',
-                format_to_json(node_value, depth=depth + 1),
+                format_to_stylish(node_value, depth=depth + 1),
                 f'{indent}{UNCHANGED}}}'
             ])
         elif node_status == CHANGED:

@@ -8,7 +8,7 @@ from gendiff.status_constants import (
 
 
 def compare_dicts(first_dict: dict, second_dict: dict) -> dict:
-    """Compares 2 dicts"""
+    """Compares 2 dicts and generates the diff"""
     keys = sorted(set(first_dict) | set(second_dict))
     return {key: generate_tree_node(
         key,
