@@ -1,7 +1,7 @@
 """Constants for indicate node status"""
 
-ADDED = '  + '
-REMOVED = '  - '
+ADDED = 'ADDED'
+REMOVED = 'REMOVED'
 NESTED = 'NESTED'
 CHANGED = 'CHANGED'
-UNCHANGED = '    '
+UNCHANGED = 'UNCHANGED'

@@ -10,30 +10,41 @@ from gendiff.status_constants import (
 def format_to_stylish(diff: dict, depth=0) -> str:
     """Formats diff to json-like style for output"""
     output = []
-    indent = UNCHANGED * depth
+    indent = '    ' * depth
     for key, node in diff.items():
         node_status = node.get('status')
         node_value = node.get('value')
         if node_status == NESTED:
             output.extend([
-                f'{indent}{UNCHANGED}{key}: {{',
+                f'{indent}    {key}: {{',
                 format_to_stylish(node_value, depth=depth + 1),
-                f'{indent}{UNCHANGED}}}'
+                f'{indent}    }}'
             ])
         elif node_status == CHANGED:
             output.extend([
-                f'{indent}{REMOVED}{key}: '
+                f'{indent}  - {key}: '
                 f'{get_value(node.get("first_value"), depth)}',
-                f'{indent}{ADDED}{key}: '
+                f'{indent}  + {key}: '
                 f'{get_value(node.get("second_value"), depth)}'
             ])
         else:
+            view = get_status_view(node_status)
             output.append(
-                f'{indent}{node_status}{key}: {get_value(node_value, depth)}'
+                f'{indent}{view}{key}: {get_value(node_value, depth)}'
             )
     if not depth:
         output = ['{'] + output + ['}']
     return '\n'.join(output)
+
+
+def get_status_view(node_status: str) -> str:
+    """Gets a view for the status type"""
+    views = {
+        ADDED: "  + ",
+        REMOVED: "  - ",
+        UNCHANGED: "    "
+    }
+    return views.get(node_status)
 
 
 def get_value(item, depth) -> str:

@@ -100,6 +100,12 @@ FILE3_FILE4_STRING = """{
     }
 }"""
 
+FILE1_FILE2_JSON = '{"follow": {"status": "REMOVED", "value": "false"},' \
+                   ' "host": {"status": "UNCHANGED", "value": "hexlet.io"},' \
+                   ' "proxy": {"status": "REMOVED", "value": "123.234.53.22"},' \
+                   ' "timeout": {"status": "CHANGED", "first_value": 50, "second_value": 20},' \
+                   ' "verbose": {"status": "ADDED", "value": "true"}}'
+
 FILE1_FILE2_STRING = """{
   - follow: false
     host: hexlet.io
@@ -180,6 +186,22 @@ FILE4_STRING = """{
         fee: 100500
     }
 }"""
+
+FILE3_FILE4_JSON = '{"common": {"status": "NESTED", "value": {"follow": {"status": "ADDED", "value": "false"},' \
+                   ' "setting1": {"status": "UNCHANGED", "value": "Value 1"},' \
+                   ' "setting2": {"status": "REMOVED", "value": 200},' \
+                   ' "setting3": {"status": "CHANGED", "first_value": "true", "second_value": "null"},' \
+                   ' "setting4": {"status": "ADDED", "value": "blah blah"},' \
+                   ' "setting5": {"status": "ADDED", "value": {"key5": "value5"}},' \
+                   ' "setting6": {"status": "NESTED",' \
+                   ' "value": {"doge": {"status": "NESTED", "value": {"wow": {"status": "CHANGED", "first_value": "",' \
+                   ' "second_value": "so much"}}}, "key": {"status": "UNCHANGED", "value": "value"},' \
+                   ' "ops": {"status": "ADDED", "value": "vops"}}}}}, "group1": {"status": "NESTED",' \
+                   ' "value": {"baz": {"status": "CHANGED", "first_value": "bas", "second_value": "bars"},' \
+                   ' "foo": {"status": "UNCHANGED", "value": "bar"}, "nest": {"status": "CHANGED",' \
+                   ' "first_value": {"key": "value"}, "second_value": "str"}}}, "group2": {"status": "REMOVED",' \
+                   ' "value": {"abc": 12345, "deep": {"id": 45}}}, "group3": {"status": "ADDED",' \
+                   ' "value": {"deep": {"id": {"number": 45}}, "fee": 100500}}}'
 
 FILE3_FILE4_PLAIN = """Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed

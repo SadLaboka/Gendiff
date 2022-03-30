@@ -4,7 +4,9 @@ from tests.fixtures.expected import (
     FILE2_STRING,
     FILE3_STRING,
     FILE4_STRING,
+    FILE1_FILE2_JSON,
     FILE1_FILE2_STRING,
+    FILE3_FILE4_JSON,
     FILE3_FILE4_STRING,
     FILE3_FILE4_PLAIN
 )
@@ -52,3 +54,23 @@ def test_generate_diff_nested_to_plain():
         file1_path,
         file2_path,
         output_format="plain") == FILE3_FILE4_PLAIN
+
+
+def test_generate_diff_to_json():
+    file1_path = 'tests/fixtures/file1.json'
+    file2_path = 'tests/fixtures/file2.json'
+
+    assert generate_diff(
+        file1_path,
+        file2_path,
+        output_format="json") == FILE1_FILE2_JSON
+
+
+def test_generate_diff_nested_to_json():
+    file1_path = 'tests/fixtures/file3.json'
+    file2_path = 'tests/fixtures/file4.json'
+
+    assert generate_diff(
+        file1_path,
+        file2_path,
+        output_format="json") == FILE3_FILE4_JSON
