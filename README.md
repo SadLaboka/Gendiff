@@ -7,6 +7,34 @@
 
 Gendiff is a simple CLI-tool to compare two files and show the difference between them
 
+## Usage
+
+### As library
+
+```python
+from gendiff import generate_diff
+
+diff = generate_diff(file1_path, file2_path, output_format)
+```
+
+### As CLI tool
+
+```
+> gendiff --help
+usage: gendiff [-h] [-f FORMAT] first_file second_file
+
+Generate diff
+
+positional arguments:
+  first_file
+  second_file
+
+options:
+  -h, --help            show this help message and exit
+  -f FORMAT, --format FORMAT
+                        set format of output
+```
+
 ## Comparing 2 flat JSON-files:
 <details>
   <summary>Click to show</summary>
