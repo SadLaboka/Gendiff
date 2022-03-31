@@ -1,8 +1,9 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "gendiff"
 version = "0.1.0"
 description = "Show diff between 2 files"
 authors = ["SadLaboka <jitubuh@gmail.com>"]
+license = "MIT"
 packages = [
     { include = "gendiff" },
 ]
