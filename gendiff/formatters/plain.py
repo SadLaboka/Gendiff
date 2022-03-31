@@ -42,6 +42,8 @@ def checks_complex(value):
     """
     if isinstance(value, dict):
         return '[complex value]'
+    if isinstance(value, int):
+        return f"{value}"
     if value in ("true", "null", "false"):
         return value
     return f"'{value}'"
