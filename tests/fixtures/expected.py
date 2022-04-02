@@ -23,8 +23,7 @@ EXPECTED_DIFF = {
                 }},
                 "key": {"status": UNCHANGED, "value": "value"},
                 "ops": {"status": ADDED, "value": "vops"}
-            }
-                         }
+            }}
         }
     },
     "group1": {"status": NESTED, "value": {
@@ -68,7 +67,9 @@ FILE3_FILE4_STRING = """{
         }
         setting6: {
             doge: {
-              - wow: 
+              - wow:"""
+FILE3_FILE4_STRING += ' '
+FILE3_FILE4_STRING += """
               + wow: so much
             }
             key: value
@@ -135,7 +136,9 @@ FILE3_STRING = """{
         setting3: true
         setting6: {
             doge: {
-                wow: 
+                wow:"""
+FILE3_STRING += ' '
+FILE3_STRING += """
             }
             key: value
         }
